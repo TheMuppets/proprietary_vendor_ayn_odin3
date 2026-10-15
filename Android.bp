@@ -7,3 +7,66 @@ soong_namespace {
         "vendor/ayn/cq8725s-common",
     ],
 }
+
+cc_prebuilt_library_shared {
+    name: "fingerprint.qcom",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/fingerprint.qcom.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libbase",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libz",
+                "libcrypto",
+                "libprocessgroup",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ff_ta.elf",
+    owner: "ayn",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ff_ta.elf",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libbase",
+                "libutils",
+                "libcutils",
+                "libbinder",
+                "libvndksupport",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}

@@ -77,3 +77,7 @@ PRODUCT_COPY_FILES += \
     vendor/ayn/odin3/proprietary/vendor/firmware/adspuo.jsn:$(TARGET_COPY_OUT_VENDOR)/firmware/adspuo.jsn \
     vendor/ayn/odin3/proprietary/vendor/firmware/aw883xx_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw883xx_acf.bin \
     vendor/ayn/odin3/proprietary/vendor/firmware/mcuapp_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mcuapp_firmware.bin
+
+PRODUCT_PACKAGES += \
+    fingerprint.qcom \
+    ff_ta.elf
