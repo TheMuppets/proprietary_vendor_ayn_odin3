@@ -81,3 +81,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprint.qcom \
     ff_ta.elf
+
+PRODUCT_COPY_FILES += \
+    vendor/ayn/odin3/proprietary/vendor/firmware/mcuapp_firmware.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/mcuapp_firmware.txt
